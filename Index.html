@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Tareas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stilos.css">
+    <style>
+        .title-box {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #17a2b8;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="title-box">Gestión de Tareas</h1>
+        </div>
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h2>Agregar Nueva Tarea</h2>
+            </div>
+            <div class="card-body">
+                <form id="formularioTareas">
+                    <div class="form-group">
+                        <label for="NombreTarea">Nombre de la Tarea</label>
+                        <input type="text" class="form-control" id="NombreTarea" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="FechaAsignacion">Fecha de Asignación</label>
+                        <input type="date" class="form-control" id="FechaAsignacion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="FechaEntrega">Fecha de Entrega</label>
+                        <input type="date" class="form-control" id="FechaEntrega" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Responsable">Persona Responsable</label>
+                        <input type="text" class="form-control" id="Responsable" required>
+                    </div>
+                    <div id="mensaje-error" class="text-danger"></div>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-header bg-warning text-white">
+                <h2>Búsqueda</h2>
+            </div>
+            <div class="card-body">
+                <input type="text" class="form-control" id="terminoBusqueda" placeholder="La búsqueda se basa en el nombre de la tarea o del responsable">
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-header">
+                <h2>Lista de Tareas</h2>
+            </div>
+            <div class="card-body">
+                <ul id="listaTareas" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+
+body {
+    background-image: url('fondo.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.tarea-completada {
+    background-color: rgb(81, 145, 81);
+    color: white(0, 0, 0);
+}
+
+.tarea-expirada {
+    background-color: rgb(129, 46, 46);
+    color: white;
+}
+
+.tarea-pendiente {
+    background-color: white;
+    color: black;
+}
+
+#mensaje-error {
+    margin-top: 10px;
+}
+
